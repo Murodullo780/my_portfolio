@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/strings.dart';
-import 'package:my_portfolio/pages/about_page/models/file_model.dart';
 import 'package:my_portfolio/pages/about_page/utils/variables.dart';
 import 'package:my_portfolio/pages/about_page/widgets/opened_pages.dart';
 import 'package:my_portfolio/pages/about_page/widgets/packages_widget.dart';
-import 'package:my_portfolio/pages/about_page/widgets/bio_widget.dart';
 
 import 'package:my_portfolio/pages/about_page/widgets/text_widget_with_line_counter.dart';
 
@@ -67,8 +65,21 @@ class _AboutMePageState extends State<AboutMePage> with VariablesAboutPage {
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
-          const SizedBox(
-            child: PackagesWidget(),
+          SizedBox(
+            child: PackagesWidget(
+              onFileAdd: (file){
+                List<String> listNames = List<String>.from(files.map((e) => e.name));
+                if(listNames.contains(file.name) == true){
+                  selectedIndex = listNames.indexOf(file.name);
+                  setState(() {});
+                  return;
+                }else{
+                  files.add(file);
+                  selectedIndex = files.length - 1;
+                  setState(() {});
+                }
+              },
+            ),
           ),
           SizedBox(
             child: Column(
@@ -80,6 +91,9 @@ class _AboutMePageState extends State<AboutMePage> with VariablesAboutPage {
                       debugPrint('close: $index');
                       if (files.length > 1) {
                         files.removeAt(index);
+                        if (index == selectedIndex) {
+                          selectedIndex = 0;
+                        }
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
@@ -93,12 +107,12 @@ class _AboutMePageState extends State<AboutMePage> with VariablesAboutPage {
                       setState(() {});
                     },
                     onTap: (int index) {
-                      debugPrint('index: $index');
                       selectedIndex = index;
-                      // setState(() {});
+                      debugPrint('index: $index');
+                      setState(() {});
                     },
                     selectedIndex: selectedIndex,
-                    pages: files.map((e) => e.name).toList(),
+                    pages: files,
                   ),
                 ),
                 files[selectedIndex].body,

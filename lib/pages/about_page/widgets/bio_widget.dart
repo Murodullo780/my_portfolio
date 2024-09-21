@@ -1,30 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/constants/strings.dart';
 import 'package:my_portfolio/pages/about_page/widgets/text_widget_with_line_counter.dart';
 
 String linesCounter = "";
 int linesI = 0;
-// final Widget textWidget = TextWidgetWithCountLineCallback(
-//   textWidget: Text(
-//     text,
-//     style: const TextStyle(fontSize: 18),
-//   ),
-//   callback: (lines) {
-//     for (int i = 0; i < lines; i++) {
-//       linesCounter += "$i";
-//     }
-//     debugPrint('lines:$linesCounter');
-//     linesI = lines;
-//   },
-// );
 
 String text = ""
-"Hi! Here information about me\n"
-"My name is Murodulloh so:\n"
-"${StringsConst.aboutMe}";
+    "Hi there! My name is Murodulloh and I'm a Flutter developer. "
+    "and you can try this page. If you want to know more about me, "
+    "please chose one of the pages in the left side menu.\n"
+    "At the moment I don't have ideas to fill this page, if you have any ideas, you can send me on telegram @murodulloh.\n"
+    "P.S. here also some issues. I'm working on it.";
 
 class ReadmeWidget extends StatelessWidget {
-
   const ReadmeWidget({
     super.key,
   });
@@ -33,7 +20,6 @@ class ReadmeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
-      // mainAxisSize: MainAxisSize.min,
       children: [
         const SizedBox(
           width: 40,

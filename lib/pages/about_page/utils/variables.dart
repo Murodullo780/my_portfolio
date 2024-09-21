@@ -11,13 +11,8 @@ mixin VariablesAboutPage {
 
   List<FileModel> files = [
     FileModel(
-      name: "readme",
-      pathName: "readme.md",
-      body: const ReadmeWidget(),
-    ),
-    FileModel(
-      name: "readme",
-      pathName: "readme.md",
+      name: "bio.dart",
+      pathName: "bio.dart",
       body: const ReadmeWidget(),
     ),
   ];
@@ -25,15 +20,15 @@ mixin VariablesAboutPage {
   List<List<String>> packageNames = [];
 
   Map<String, List<String>> packages = {
-    "Bio": [
-      "bio",
+    "bio.dart": [
+      "bio.dart",
     ],
-    "Interests": [
-      "interests",
-    ],
+    // "Interests": [
+    //   "interests.dart",
+    // ],
     "Education": [
-      "school",
-      "university",
+      "school.dart",
+      "university.dart",
     ],
   };
 
@@ -41,9 +36,9 @@ mixin VariablesAboutPage {
     "Bio": [
       const ReadmeWidget(),
     ],
-    "Interests": [
-      const InterestsWidget(),
-    ],
+    // "Interests": [
+    //   const InterestsWidget(),
+    // ],
     "Education": [
       const SchoolWidget(),
       const UniversityWidget(),
