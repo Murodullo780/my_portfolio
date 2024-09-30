@@ -39,7 +39,7 @@ class ReadmeWidget2 extends StatelessWidget {
         ),
         const SizedBox(width: 40),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.9 - 330,
+          width: MediaQuery.of(context).size.width * 0.9 - 420,
           child: TextWidgetWithCountLineCallback(
             textWidget: Text(
               text,

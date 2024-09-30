@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MyAppExample extends StatelessWidget {
+class MyAppExample extends StatefulWidget {
+  const MyAppExample({super.key});
+
+  @override
+  State<MyAppExample> createState() => _MyAppExampleState();
+}
+
+class _MyAppExampleState extends State<MyAppExample> {
   // List of special words to highlight
   final List<String> specialWords = ['This', 'important'];
-
-  MyAppExample({super.key});
 
   @override
   Widget build(BuildContext context) {

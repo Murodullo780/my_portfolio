@@ -1,9 +1,9 @@
-import 'package:flutter/foundation.dart' show defaultTargetPlatform, kIsWeb;
+import 'package:flutter/foundation.dart' show defaultTargetPlatform;
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/pages/about_page/about_me_page.dart';
-import 'package:my_portfolio/pages/about_page/widgets/example.dart';
 import 'package:my_portfolio/pages/bottom_navigation/my_bottom_navigation.dart';
 import 'package:my_portfolio/pages/main_page/main_page.dart';
+import 'package:my_portfolio/pages/projects/projects_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -14,10 +14,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<Widget> pages = [
-    const AboutMePage(),
+    const ProjectsPage(),
     const MainPage(),
-    MyAppExample(),
-    // Container(),
+    const AboutMePage(),
   ];
 
   @override

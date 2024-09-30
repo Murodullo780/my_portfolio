@@ -13,7 +13,7 @@ mixin VariablesAboutPage {
     FileModel(
       name: "bio.dart",
       pathName: "bio.dart",
-      body: const UniversityWidget(),
+      body: const ReadmeWidget2(),
     ),
   ];
 
