@@ -11,8 +11,8 @@ String text = ""
     "At the moment I don't have ideas to fill this page, if you have any ideas, you can send me on telegram @murodulloh.\n"
     "P.S. here also some issues. I'm working on it.";
 
-class ReadmeWidget extends StatelessWidget {
-  const ReadmeWidget({
+class ReadmeWidget2 extends StatelessWidget {
+  const ReadmeWidget2({
     super.key,
   });
 
@@ -39,7 +39,7 @@ class ReadmeWidget extends StatelessWidget {
         ),
         const SizedBox(width: 40),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.9 - 430,
+          width: MediaQuery.of(context).size.width * 0.9 - 330,
           child: TextWidgetWithCountLineCallback(
             textWidget: Text(
               text,

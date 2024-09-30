@@ -91,7 +91,9 @@ class _AboutMePageState extends State<AboutMePage> with VariablesAboutPage {
                       debugPrint('close: $index');
                       if (files.length > 1) {
                         files.removeAt(index);
-                        if (index == selectedIndex) {
+                        if (index < selectedIndex) {
+                          selectedIndex = index;
+                        } else if (selectedIndex == index) {
                           selectedIndex = 0;
                         }
                       } else {

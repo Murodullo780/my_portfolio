@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/pages/about_page/models/file_model.dart';
 import 'package:my_portfolio/pages/about_page/widgets/bio_widget.dart';
-import 'package:my_portfolio/pages/about_page/widgets/interests_widget.dart';
+import 'package:my_portfolio/pages/about_page/widgets/bio_widget_2.dart';
 import 'package:my_portfolio/pages/about_page/widgets/school_widget.dart';
 import 'package:my_portfolio/pages/about_page/widgets/university_widget.dart';
 
@@ -13,7 +13,7 @@ mixin VariablesAboutPage {
     FileModel(
       name: "bio.dart",
       pathName: "bio.dart",
-      body: const ReadmeWidget(),
+      body: const UniversityWidget(),
     ),
   ];
 
@@ -34,11 +34,8 @@ mixin VariablesAboutPage {
 
   Map<String, List<Widget>> packagesWidgets = {
     "Bio": [
-      const ReadmeWidget(),
+      const ReadmeWidget2(),
     ],
-    // "Interests": [
-    //   const InterestsWidget(),
-    // ],
     "Education": [
       const SchoolWidget(),
       const UniversityWidget(),
